@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>帳戶控管</title>
+    <style>
+        .loginInButton {
+            width:125px;
+            height:50px;
+        }
+        .singInButton{
+            width:125px;
+            height:50px;
+            position:relative;
+            right:125px;
+            top:96px;
+        }
+        .inputText {
+            width:250px;
+            height:20px;
+        }
+        .headImg{
+            width:200px;
+            height:220px;
+        }
+
+    </style>
+    <script>
+        var t = 5;
+        function showTime() {
+            t -= 1;
+            document.getElementById('div1').innerHTML = t;
+
+            if (t == 0) {
+                location.href = 'http://www.dotblogs.com.tw/puma/';
+            }
+
+            //每秒執行一次,showTime()
+            setTimeout("showTime()", 1000);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <img src="noone.jpg" class="headImg">
+            </td>
+            <td> 
+                <form method="post" name="acoountInput" action="">
+                    <h4>帳號:</h4>
+                    <input type="text" class="inputText" name="acoountNumber"/>
+                    <h4>密碼:</h4>
+                    <input type="password" class="inputText" name="password"/>
+                    <br /><br />
+                    <input type="submit" value="登入" class="loginInButton" />
+                </form>
+            </td>
+            <td>
+                <form method="get" action="">
+                    <input type="submit" value="註冊" class="singInButton"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <a href=""></a>
+</body>
+</html>
+
+  window.twttr = (function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+ 
+       t._e = [];
+       t.ready = function(f) {
+           t._e.push(f);
+       };
+
+       return t;
+  }(document, "script", "twitter-wjs"));
+
+
+function login_twitter(network){  //登錄方法，並將twitter 作為參數傳入
+                  // Twitter instance
+                 var twitter = hello(network);
+                 // Login
+                 twitter.login().then( function(r){
+                     // Get Profile
+                     return twitter.api('/me');
+                 }, log ) .then( function(p){
+                      console.log("Connected to "+ network+" as " + p.name);
+                      var res = JSON.stringify(p);//因為得不到token，但是這步已經得到用户所有信息，所以將用户信息轉成JSON字符串給後台
+                      self.location= '/home/login.twLogin.do?result='+res;
+                 }, log );
+             }

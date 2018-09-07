@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Reward 好爽哦!</title>
+    <style>
+        .itemImg{
+            width:200px;
+            height:80px;
+            position:relative;
+            right:250px;
+        }
+        .itemText{
+            font-size:26px;
+            position:relative;
+            right:80px;
+        }
+        .btn {
+            width:100px;
+            height:80px;
+        }
+    </style>
+    <script>
+        function randomTag(mTimes,sTimes,seTime)
+        {
+            var alphaStr = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+            var i;
+            var tag = "";
+            for (j = 0; j < mTimes; j++)
+            {
+                for(i=0;i<20;i++)
+                    tag += alphaStr[Math.floor(Math.random() * 36)];
+                document.getElementById("m" + j).innerHTML = tag;
+            }
+            for (j = 0; j < sTimes; j++) {
+                for (i = 0; i < 20; i++)
+                    tag += alphaStr[Math.floor(Math.random() * 36)];
+                document.getElementById("s" + j).innerHTML = tag;
+            }
+            for (j = 0; j < sTimes; j++) {
+                for (i = 0; i < 20; i++)
+                    tag += alphaStr[Math.floor(Math.random() * 36)];
+                document.getElementById("se" + j).innerHTML = tag;
+            }
+        }
+        window.addEventListener("load", start(), false);
+    </script>
+</head>
+<body>
+    <table align="center">
+        <tr style="font-size:22px; text-decoration:underline;">
+            <td style="position:relative; right:180px;"> 物 品 圖 片</td>
+            <td> 物 品 名 稱</td>
+            <td> 兌 換 序 號</td>
+        </tr>
+        <tr>
+            <td><img src="mmm.jpg" class="itemImg" /></td>
+            <td class="itemText"> 麥當勞套餐兌換卷</td>
+            <td id="m1"></td>
+        </tr>
+        <tr>
+            <td><img src="startbark.jpg" class="itemImg" /></td>
+            <td class="itemText"> 星巴克咖啡類兌換卷</td>
+           
+        </tr>
+        <tr>
+            <td><img src="711shopping.png" class="itemImg" /></td>
+            <td class="itemText"> 7-11購物金50元</td>
+        </tr>
+    </table>
+</body>
+</html>

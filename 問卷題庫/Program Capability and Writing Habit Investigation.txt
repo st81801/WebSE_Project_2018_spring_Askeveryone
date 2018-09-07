@@ -1,0 +1,57 @@
+#2
+title:Program Capability and Writing Habit Investigation
+description:The ability of programming is becoming more and more common in education. It can even be said to be an indispensable link. How do you think about this phenomenon?
+keyword1:programming
+keyword2:code
+keyword3:C++
+keyword4:Java
+keyword5:education
+keyword6:phenomenon
+question1:How long have you been learning the program?
+option1:Less than half a year
+option2:About one year
+option3:About three years
+option4:About six years
+option5:More than ten years
+question2:Which programming language is your first language to learn?
+option1:C/C++
+option2:Python
+option3:Java
+option4:Swift
+option5:VB
+question3:Which programming language do you like best?
+option1:C/C++
+option2:Python
+option3:Java
+option4:Swift
+option5:VB
+question4:Do you support the inclusion of program language credits in education?
+option1:Strongly agree
+option2:Agree
+option3:Neutral
+option4:Disagree
+option5:Strongly disagree
+question5:When do you think it is better to add programming language education?
+option1:Preschool
+option2:Junior 
+option3:high school
+option4:University
+option5:Never
+question6:Which programming language do you recommend to people who are new to the program?
+option1:C/C++
+option2:Python
+option3:Java
+option4:Swift
+option5:VB
+question7:Which language skills do the programming languages ??need to learn first?
+option1:Data structure
+option2:Algorithm
+option3:Computer structure
+option4:Linear algebra
+option5:Problem solving skills
+question8:How long do you think it takes to become familiar with a programming language?
+option1:One week
+option2:One month
+option3:Half year
+option4:One year
+option5:More than One year
